@@ -1,0 +1,37 @@
+.box-chat {
+  width: 400px;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+.messages-box {
+  position: absolute;
+  width: 400px;
+  height: 80vh;
+  bottom: 80px;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid white;
+  overflow-y: auto;
+}
+.message-input-div {
+  position: absolute;
+  bottom: 0;
+}
+
+#message-input {
+  background: rgba(60, 60, 60, 0.4);
+  color: white;
+}
+
+#message-input::placeholder {
+  color: white;
+  opacity: 0.4;
+}
+
+.box-title {
+  position: absolute;
+  color: white;
+  top: 30px;
+}
