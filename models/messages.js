@@ -20,5 +20,7 @@ const messagesSchema = mongoose.Schema(
   }
 );
 
+messagesSchema.index({ user_id: 1 });
+
 const Messages = mongoose.model("Messages", messagesSchema);
 module.exports = Messages;
