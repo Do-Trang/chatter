@@ -12,7 +12,7 @@ function receive(message) {
 function connect(server) {
   const io = new Server(server, {
     cors: {
-      origin: "http://localhost:3100", // Replace with your client's origin
+      origin: `*`, // Replace with your client's origin
       methods: ["GET", "POST"],
     },
   });
