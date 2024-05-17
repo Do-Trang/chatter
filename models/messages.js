@@ -6,10 +6,10 @@ const messagesSchema = mongoose.Schema(
       type: String,
       required: [true, "User id by MySQL"],
     },
-    user_name: {
-      type: String,
-      required: [true, "User name by MySQL"],
-    },
+    // user_name: {
+    //   type: String,
+    //   required: [true, "User name by MySQL"],
+    // },
     message: {
       type: String,
       required: true,

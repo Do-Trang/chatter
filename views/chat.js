@@ -7,7 +7,7 @@ input.keypress(function (e) {
     if (input.val()) {
       socket.emit("client_send_message", {
         user_id: "anonymous",
-        user_name: "Anonymous",
+        // user_name: "Anonymous",
         message: input.val(),
       });
       input.val("");
@@ -18,7 +18,7 @@ input.keypress(function (e) {
 
 socket.on("server_send_message", (msg) => {
   $(".messages-ul").append(
-    `<li class="messages-li">${msg?.user_name}: ${msg?.message}</li>`
+    `<li class="messages-li"> ${msg?.message}</li>`
   );
 });
 
@@ -29,7 +29,7 @@ fetch("http://localhost:3001/messages")
   .then((data) => {
     data?.forEach((msg) => {
       $(".messages-ul").append(
-        `<li class="messages-li">${msg?.user_name}: ${msg?.message}</li>`
+        `<li class="messages-li"> ${msg?.message}</li>`
       );
     });
   });
